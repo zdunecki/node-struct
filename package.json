@@ -1,0 +1,25 @@
+{
+  "name": "node-struct",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdunecki/node-struct.git"
+  },
+  "author": "Patryk Zdunowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zdunecki/node-struct/issues"
+  },
+  "homepage": "https://github.com/zdunecki/node-struct#readme",
+  "devDependencies": {
+    "jest": "^25.2.3"
+  }
+}
