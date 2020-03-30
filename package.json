@@ -21,5 +21,8 @@
   "homepage": "https://github.com/zdunecki/node-struct#readme",
   "devDependencies": {
     "jest": "^25.2.3"
+  },
+  "dependencies": {
+    "joi": "^14.3.1"
   }
 }
