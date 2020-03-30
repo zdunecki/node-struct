@@ -20,7 +20,7 @@ test("test struct", () => {
 
 test("test struct with basic validation", async () => {
   const Account = struct({
-    ID: `mysql:"id" json:"id" valid:"string,required"`,
+    ID: `mysql:"id" json:"id" valid:"string,min=3,max=10,required"`,
     UserAccountID: `mysql:"user_account_id" json:"userAccountId" valid:"string"`,
     Email: `mysql:"email" json:"email" valid:"string"`,
     FirstName: `"mysql":first_name"json:"firstName" valid:"string"`,
