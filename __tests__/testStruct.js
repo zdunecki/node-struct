@@ -45,3 +45,46 @@ test("test struct with basic validation", async () => {
   expect(account2.FirstName).toBe(firstName);
   expect(error).toBe(null);
 });
+
+test("test struct as array", () => {
+  const Product = struct({
+    FirstName: `mysql:"first_name" json:"firstName"`
+  });
+
+  const firstName = "First Name";
+
+  const product = Product([
+    {
+      FirstName: firstName
+    },
+    {
+      FirstName: firstName
+    }
+  ]);
+
+  expect(product[0].FirstName).toBe(firstName);
+});
+
+test("test struct as array in default mysql format", () => {
+  const Product = struct({
+    FirstName: `mysql:"first_name" json:"firstName"`
+  });
+
+  const firstName = "First Name";
+  const secondFirstName = "First Name2";
+
+  const product = Product(
+    [
+      {
+        first_name: firstName
+      },
+      {
+        first_name: secondFirstName
+      }
+    ],
+    "mysql"
+  );
+
+  expect(product[0].FirstName).toBe(firstName);
+  expect(product[1].FirstName).toBe(secondFirstName);
+});
